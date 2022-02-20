@@ -1,0 +1,53 @@
+@startuml
+
+class Map
+{
+    SlingshotX: double
+    SlingshotY: double
+}
+
+class Pig
+{
+    posX: double
+    posY: double
+    size: int
+    hp: int
+    type: int
+
+}
+
+class Beam
+{
+    posX: double
+    posY: double
+    degree: double
+    sizeX: int
+    sizeY: int
+    hp: int
+    material: int
+}
+
+class Slingshot
+{
+    degree: double
+    tension: double
+}
+
+class Bird
+{
+    posX: double
+    posY: double
+    size: int
+    hp: int
+    type: int
+    speed: double
+}
+
+Map --> Slingshot : location
+Map --> Beam : location
+Map --> Pig : location
+Map --> Bird : location
+Bird --> Pig : kill him
+Bird --> Beam: It would break him
+Slingshot - Bird : Shot >
+@enduml
