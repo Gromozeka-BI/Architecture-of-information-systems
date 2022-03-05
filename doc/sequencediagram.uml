@@ -1,9 +1,12 @@
 @startuml
-actor SmartCamera #red
+actor User #red
 
-SmartCamera -> Robot: GraffitiRecognized()
-Robot -> Robot: Turn motor on
-SmartCamera -> Robot: MoveToGraffiti()
-Robot -> Robot: Turn cleaner on
-
+User - Software  Start(T)
+Software - Camera TurnOnCamera()
+Camera- Software  TakePhoto()
+Software - Software  SearchGraffiti()
+Software - Software  SearchRobot()
+Software- Robot MoveToGraffiti()
+Robot- Robot GoToGraffiti()
+Robot- Robot TurnCleanerOn()
 @enduml
