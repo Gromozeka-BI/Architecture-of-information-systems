@@ -1,8 +1,8 @@
 @startuml
-Camera o-- Softwear
-Softwear o-- Robot
+Camera o-- Software
+Software o-- Robot
 
-class Softwear{
+class Software{
 void Room()
 void Camera()
 void SearchGraffiti()
